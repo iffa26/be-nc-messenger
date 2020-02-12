@@ -9,6 +9,10 @@ const io = socketIO(server);
 // server.use(express.json());
 // server.use("/");
 
+app.get("/", function(req, res) {
+  res.send("<h1>Hello</h1>");
+});
+
 io.on("connection", socket => {
   console.log("user connected");
 
